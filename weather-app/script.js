@@ -1,4 +1,4 @@
-// --- Popular Indian Cities Weather Cards ---
+
 const popularCities = [
     { name: 'Delhi' },
     { name: 'Mumbai' },
@@ -27,7 +27,7 @@ function createCityCard(city, weather) {
             ` : '<div>Loading...</div>'}
         </div>
     `;
-    // Expand/collapse on hover (desktop) and click (mobile)
+   
     card.addEventListener('mouseenter', () => {
         card.classList.add('expanded');
         card.classList.remove('collapsed');
@@ -91,7 +91,7 @@ function getWeather(city) {
             return response.json();
         })
         .then(data => {
-            // Create a card for the searched city
+           
             const card = document.createElement('div');
             card.className = 'city-card collapsed';
             card.innerHTML = `
